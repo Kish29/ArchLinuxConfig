@@ -1,0 +1,4 @@
+xterm*faceName: Monaco:antialia=True:style=Regular:pixelsize=16
+xterm*faceNameDoublesize: WenQuanYi Zen Hei Mono:antialias=True:pixelsize=16
+xterm*background: #222222
+xterm*foreground: white

@@ -8,4 +8,4 @@
 	or query nvidia
 	lsmod | grep nvidia
 2->> Install nvidia switch tool
-	pacman -S nvidia-prime
+	pacman -S nvidia-prime <- seems it can not work in ArchLinux...

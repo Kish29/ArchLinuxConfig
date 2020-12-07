@@ -1,0 +1,11 @@
+1->> Install nvidia driver
+	pacman -S nvidia nvidia-settins
+	reboot
+	
+	query nouveau is running:
+	lsmod | grep nouveau
+	if output message is null, indicates that your nvidia driver is running instead of nouveau;
+	or query nvidia
+	lsmod | grep nvidia
+2->> Install nvidia switch tool
+	pacman -S nvidia-prime

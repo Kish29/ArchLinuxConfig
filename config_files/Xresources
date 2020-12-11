@@ -1,0 +1,7 @@
+xterm*faceName: Monaco:antialia=True:style=Regular:pixelsize=16
+xterm*faceNameDoublesize: WenQuanYi Zen Hei Mono:antialias=True:pixelsize=16
+xterm*background: #222222
+xterm*foreground: white
+xterm*VT100.Translations:	#override \
+							Ctrl Shift <Key>V:	insert-selection(CLIPBOARD)	\n\
+							Ctrl Shift <Key>C:	copy-selection(CLIPBOARD)

@@ -93,3 +93,7 @@
 	然后在shell脚本中添加，-g参数显示详情
 	alias xcp='xcp -g'
 	alias xmv='xmv -g'
+
+
+
+

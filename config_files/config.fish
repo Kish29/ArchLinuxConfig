@@ -13,8 +13,8 @@
 #   ...
 # end
 #
-alias xcp='xcp -g'
-alias xmv='xmv -g'
+alias cp='cp -g'
+alias mv='mv -g'
 
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx

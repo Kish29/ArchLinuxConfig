@@ -141,6 +141,11 @@
 	docker rmi image_id
 	show all process:
 	docker ps -a
+	修改镜像路径
+	在 /lib/systemd/system/docker.service的ExecSart后面加上
+	--graph=/data/docker
+	然后把原来在/var/lib/docker/下面的所有东西(包括镜像)移动到/data/docker目录下
+	重启docker
 
 ## 安装vim的markdown插件 instant-markdown
 	请看官方的安装文档说明

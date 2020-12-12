@@ -25,7 +25,9 @@
 	pacman -S xterm
 	可选
 	pacman -S xorg-xrandr
-
+        修改xinitrc文件来启动i3-wm
+        vim /etc/X11/xinit/xinitrc
+        注释掉上面的几行，然后添加 exec i3
 
 ## 安装Monaco字体
 	wget http://d.xiazaiziti.com/en_fonts/fonts/m/Monaco.ttf

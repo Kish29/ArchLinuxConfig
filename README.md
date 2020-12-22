@@ -178,3 +178,18 @@
 	开放端口：使得远程目标可以访问本机的某个端口
 	监听：某个服务软件在该端口运行并监听
 
+## linux使用valgrind检查内存泄露以及使用coredump进行错误排查
+	安装valgrind
+	pacman -S valgrind
+
+	生成coredump文件
+	1. 首先查看是否开启coredump功能：
+		ulimint -c 查看core file的限制大小，0代表0KB即没有开启
+		ulimint -a 查看所有配置
+	2. 修改core_pattern文件，在当前文件生成coredump文件
+		echo "core_dump_%e_%p_%t"
+	3. 生成coredump文件
+		gcc/g++ -g ...
+	4. 使用gdb查看出错位置
+		where
+	5. gdb 可执行文件ELF 你的coredump文件

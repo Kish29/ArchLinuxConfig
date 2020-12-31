@@ -228,4 +228,6 @@
 ## 修改grub启动背景
 	vim /etc/default/grub
 	找到GRUB_BACKGROUND
-	修改即可
+	修改,然后重新生成grub.cfg文件
+	grub-mkconfig -o /boot/grub/grub.cfg
+	记得提前备份你原先的grub.cfg以免以前的配置丢失

@@ -193,3 +193,35 @@
 	4. 使用gdb查看出错位置
 		where
 	5. gdb 可执行文件ELF 你的coredump文件
+
+## 使用peda来做gdb调试插件
+	pacman -S peda
+	在 /etc/gdb/gdbinit中添加
+	source /usr/share/peda/peda.py
+	修改peda的颜色：
+	由于黑色背景和blue显示不清楚，将blue和purple的颜色号对调一下
+	vim /usr/share/peda/lib/utils.py
+	将blue改成35就行
+
+## linux下自定义动态链接库要注意的问题
+	如：自定义动态链接库sqrt
+	需要：sqrt.h sqrt.cpp
+	生成动态链接库：
+	g++ -fPIC -shared -o libsqrt.so sqrt.cpp
+	或者分步：
+	g++ -fPIC -c sqrt.cpp
+	g++ -shared -o libsqrt.so sqrt.o
+	注意：格式必须是libXXX.so
+
+	然后使用：
+	在cpp文件中添加.h
+	如： main.cpp
+		#include "sqrt.h"
+	编译：
+		g++ -o main main.cpp -L .so文件目录 -lsqrt
+	注意，使用的时候，-lsqrt就不再需要加lib前缀了，如-llibsqrt是会报错的
+
+	然后修改运行库配置文件
+		vim /etc/ld.so.conf
+	添加你的运行时库的目录即可
+

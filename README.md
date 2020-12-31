@@ -231,3 +231,6 @@
 	修改,然后重新生成grub.cfg文件
 	grub-mkconfig -o /boot/grub/grub.cfg
 	记得提前备份你原先的grub.cfg以免以前的配置丢失
+	其实可以看到，在grub.cfg文件中，添加了以下两行(大概)
+		insmod png
+		background_image -m stretch 你的背景图目录

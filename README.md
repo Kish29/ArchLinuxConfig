@@ -225,3 +225,7 @@
 		vim /etc/ld.so.conf
 	添加你的运行时库的目录即可
 
+## 修改grub启动背景
+	vim /etc/default/grub
+	找到GRUB_BACKGROUND
+	修改即可

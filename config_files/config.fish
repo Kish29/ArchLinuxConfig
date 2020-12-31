@@ -20,3 +20,5 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 
+# initialize core dump file
+echo "core_%e_%p_%t" > /proc/sys/kernel/core_pattern

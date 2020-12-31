@@ -31,6 +31,8 @@ set noexpandtab
 " always show status bar
 set laststatus=2
 " set ruler
+" enable clipboard 
+" set clipboard=unnamedplus
 
 
 "===================插件配置===========================

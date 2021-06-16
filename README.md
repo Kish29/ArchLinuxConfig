@@ -38,6 +38,8 @@
 
 ## 安装Monaco字体
 	wget http://d.xiazaiziti.com/en_fonts/fonts/m/Monaco.ttf
+	create a new directory named monaco in /use/share/font
+	copy this font into /usr/share/font/monaco
 	fc-cache -v生成自体
 	然后用fc-list | grep -i monaco 找一下是不是正确生成了字体
 
